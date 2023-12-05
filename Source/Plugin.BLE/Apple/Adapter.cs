@@ -437,7 +437,7 @@ namespace Plugin.BLE.iOS
             return records;
         }
 
-#if NET6_0_OR_GREATER || __IOS__
+#if (NET6_0_OR_GREATER || __IOS__) && !__MACOS__
         public override bool SupportsExtendedAdvertising()
         {
 #if NET6_0_OR_GREATER
